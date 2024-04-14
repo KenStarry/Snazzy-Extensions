@@ -1,6 +1,6 @@
 part of snazzy_extensions;
 
-extension DateStringExtensions on String {
+extension DateTimeStringExtensions on String {
   /// Parse date to day name
   /// Parse date to day int
   /// Parse date to month name
@@ -12,4 +12,18 @@ extension DateStringExtensions on String {
   /// Parse date to milliseconds
   /// Parse date to DateTime obj
   /// Get number of days between dates
+  /// Get Current Hour in 24 hour format
+  String get getCurrentHourIn24 {
+    final date = DateTime.parse(this);
+
+    final formatter = easy_locale.DateFormat('HH');
+    return formatter.format(date);
+  }
+
+  String get getCurrentMinutes {
+    final date = DateTime.parse(this);
+
+    final formatter = easy_locale.DateFormat('mm');
+    return formatter.format(date);
+  }
 }
