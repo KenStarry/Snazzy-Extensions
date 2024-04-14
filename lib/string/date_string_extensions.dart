@@ -13,14 +13,15 @@ extension DateTimeStringExtensions on String {
   /// Parse date to DateTime obj
   /// Get number of days between dates
   /// Get Current Hour in 24 hour format
-  String get getCurrentHourIn24 {
+  String get szGetCurrentHourIn24 {
     final date = DateTime.parse(this);
 
     final formatter = easy_locale.DateFormat('HH');
     return formatter.format(date);
   }
 
-  String get getCurrentMinutes {
+  /// Get Minutes From Time
+  String get szGetCurrentMinutes {
     final date = DateTime.parse(this);
 
     final formatter = easy_locale.DateFormat('mm');
