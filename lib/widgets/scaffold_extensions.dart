@@ -2,7 +2,7 @@ part of snazzy_extensions;
 
 extension ScaffoldExtensions on Scaffold {
   /// Add Annotated region for the status bar
-  Widget addAnnotatedRegion(
+  Widget szAnnotatedRegion(
       {Color? statusBarColor,
       Brightness? statusBarBrightness,
       Color? navigationBarColor,

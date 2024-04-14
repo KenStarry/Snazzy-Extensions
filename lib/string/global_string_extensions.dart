@@ -2,7 +2,7 @@ part of snazzy_extensions;
 
 extension GlobalStringExtensions on String {
   /// Truncate Name
-  String get truncateName {
+  String szTruncateName() {
     final wordArray = split(' ');
 
     return wordArray.length > 1

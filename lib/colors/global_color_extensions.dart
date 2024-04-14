@@ -2,7 +2,7 @@ part of snazzy_extensions;
 
 extension GlobalColorExtensions on Color {
   /// Darken color by percent (100 -> black)
-  Color darkenColor([int percent = 10]) {
+  Color szDarkenColor([int percent = 10]) {
     assert(1 <= percent && percent <= 100);
 
     var f = 1 - percent / 100;
@@ -11,7 +11,7 @@ extension GlobalColorExtensions on Color {
   }
 
   /// Lighten Color by percent (100 -> white)
-  Color lightenColor([int percent = 10]) {
+  Color szLightenColor([int percent = 10]) {
     assert(1 <= percent && percent <= 100);
 
     var p = percent / 100;
@@ -21,10 +21,10 @@ extension GlobalColorExtensions on Color {
   }
 
   /// Color to Hex
-  String get toHexString => '#${value.toRadixString(16)}';
+  String szToHexString() => '#${value.toRadixString(16)}';
 
   /// Color to int value
-  int get toIntValue => value;
+  int szToIntValue() => value;
 
   /// Generate Material Color Palette from color
 }
