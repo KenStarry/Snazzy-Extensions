@@ -2,6 +2,7 @@ library snazzy_extensions;
 
 import 'dart:math';
 import 'dart:ui';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -18,3 +19,4 @@ part 'colors/global_color_extensions.dart';
 
 /// Widget Extensions
 part 'widgets/scaffold_extensions.dart';
+part 'widgets/text_extensions.dart';
