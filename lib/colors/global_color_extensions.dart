@@ -37,7 +37,7 @@ extension GlobalColorExtensions on Color {
       1);
 
   /// Generate Random color
-  Color get generateRandomColor {
+  Color get szGenerateRandomColor {
     final rand = Random();
 
     Color randomColor = Color.fromRGBO(
