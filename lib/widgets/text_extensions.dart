@@ -3,7 +3,7 @@ part of snazzy_extensions;
 extension TextExtensions on Text {
   /// Add Hyperlinks to text
   Text szAddHyperLinks(
-      {List<String>? hyperLinkTexts,
+      {required List<String> hyperLinkTexts,
       bool showUnderline = true,
       bool makeBold = false,
       Color? hyperLinkColor,
@@ -11,9 +11,7 @@ extension TextExtensions on Text {
     final originalString = data;
     final originalStringArray = originalString?.split(' ');
 
-    final text = hyperLinkTexts == null
-        ? this
-        : Text.rich(TextSpan(
+    final text = Text.rich(TextSpan(
             children: originalStringArray
                 ?.map((word) => TextSpan(
                     text: '$word ',
