@@ -4,6 +4,9 @@ extension TextExtensions on Text {
   /// Add Hyperlinks to text
   Text szAddHyperLinks(
       {List<String>? hyperLinkTexts,
+      bool showUnderline = true,
+      bool makeBold = false,
+      Color? hyperLinkColor,
       Function(String word)? onHyperlinkClicked}) {
     final originalString = data;
     final originalStringArray = originalString?.split(' ');
@@ -18,10 +21,17 @@ extension TextExtensions on Text {
                         ? null
                         : TapGestureRecognizer()
                       ?..onTap = () => onHyperlinkClicked!(word),
-                    style: TextStyle(
-                        color: hyperLinkTexts.contains(word)
-                            ? Colors.blue
-                            : style?.color)))
+                    style: hyperLinkTexts.contains(word)
+                        ? TextStyle(
+                            decoration:
+                                showUnderline ? TextDecoration.underline : null,
+                            fontSize: style?.fontSize,
+                            fontFamily: style?.fontFamily,
+                            fontStyle: style?.fontStyle,
+                            fontWeight:
+                                makeBold ? FontWeight.w800 : style?.fontWeight,
+                            color: hyperLinkColor ?? Colors.blue)
+                        : style))
                 .toList()));
 
     return text;
